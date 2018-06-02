@@ -1,10 +1,13 @@
 <div class="row gutter-0">
     <div class="container spacer">
         <div class="col-md-3 tabs">
-            <button class="btn tab">Tab 1</button>
-            <button class="btn tab">Tab 2</button>
-            <button class="btn tab">Tab 3</button>
-            <button class="btn tab">Tab 4</button>            
+            <button class="btn tab" [style.font-size.px]="fontSize">Tab 1</button>
+            <button class="btn tab" [style.font-size.px]="fontSize">Tab 2</button>
+            <button class="btn tab" [style.font-size.px]="fontSize">Tab 3</button>
+            <button class="btn tab" [style.font-size.px]="fontSize">Tab 4</button>
+            <div class="slidecontainer">
+                <input type="range" min="10" max="30" value="15" (input)="valueChanged($event.target.value)">
+            </div>
         </div>
         <div class="col-md-9 content">
             <img src="../assets/image.jpg" alt="Image not loaded" class="img">
